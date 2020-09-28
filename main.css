@@ -1,0 +1,510 @@
+/*******************/
+/*******************/
+/****** RULES ******/
+* {
+  margin: 0px;
+  border: 0px;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  font-size: 14px;
+  scroll-behavior: smooth;
+  background: #fafafa;
+}
+
+.clear {
+  clear: both;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+p {
+  padding: 0;
+  margin: 0;
+  color: var(--textGrey);
+  font-weight: 400;
+  font-family: 'campton', Arial;
+}
+
+/* COLORS */
+:root {
+  --textGrey: #444444;
+  --stroke: rgba(68, 68, 68, 0.2);
+  --main: #e83f4c;
+  --white: white;
+  --black: #141414;
+  --footerText: #ffffff;
+}
+
+@font-face {
+  font-family: "campton";
+  src: url("/fonts/campton-book-webfont.woff") format("woff");
+  src: url("/fonts/campton-book-webfont.woff2") format("woff2");
+}
+
+.muscleActive {
+  fill: #801922 !important;
+}
+
+/**********************/
+/**********************/
+/****** CONTENT *******/
+/****** HEADER ******/
+#navigationBar {
+  background: #e83f4c;
+  width: 100vw;
+  height: 7.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#navigationBar #navContent {
+  width: 80%;
+  height: 100%;
+}
+
+#navigationBar #navContent .logo {
+  width: 20%;
+  height: 100%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navigationBar #navContent .logo p {
+  font-family: 'Oswald', 'Arial';
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  color: white;
+}
+
+#navigationBar #navContent nav {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navigationBar #navContent nav ul {
+  width: 100%;
+  text-align: right;
+}
+
+#navigationBar #navContent nav ul li {
+  list-style: none;
+  padding: 0;
+  margin-left: 5%;
+  display: inline-block;
+}
+
+#navigationBar #navContent nav ul li a {
+  font-size: .9em;
+  font-weight: 700;
+  color: var(--white);
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: 'campton', 'Arial';
+  letter-spacing: .2px;
+}
+
+#navigationBar #navContent nav ul li a:hover {
+  color: #f16d78;
+}
+
+#navigationBar #navContent nav ul li .selected {
+  pointer-events: none;
+  color: rgba(200, 200, 200, 0.6);
+}
+
+#muscularSystemWrapper {
+  width: 100vw;
+  height: 92.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 10%;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+#muscularSystemWrapper #muscularSystemContent {
+  width: 35vw;
+  height: 100%;
+  background: white;
+  margin-right: 2.5%;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView {
+  height: 10vh;
+  width: 100%;
+  padding: 5% 3.5%;
+  text-align: center;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView .person {
+  width: 47.5%;
+  height: 100%;
+  border: 2px solid var(--textGrey);
+  border-radius: 50px;
+  float: left;
+  margin-right: 5%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView .person:hover {
+  background: var(--main);
+  border-color: var(--main);
+  color: white;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView .person:hover p {
+  color: white;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView .list {
+  width: 47.5%;
+  height: 100%;
+  border: 2px solid var(--textGrey);
+  border-radius: 50px;
+  float: left;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView .list:hover {
+  background: var(--main);
+  border-color: var(--main);
+  color: white;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView .list:hover p {
+  color: white;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView .styleActive {
+  background: var(--main);
+  border-color: var(--main);
+  cursor: default;
+}
+
+#muscularSystemWrapper #muscularSystemContent #changeView .styleActive p {
+  color: white;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW {
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+  display: none;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent {
+  width: 100%;
+  padding: 7.5%;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .muscleInfo {
+  padding: 5% 2.5%;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .muscleInfo .muscleText {
+  width: 60%;
+  float: left;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .muscleInfo .muscleText p {
+  font-family: 'Roboto', Arial;
+  font-weight: 600;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .muscleInfo .muscleNumber {
+  width: 40%;
+  float: left;
+  text-align: right;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .muscleInfo .muscleNumber p {
+  font-family: 'Roboto', Arial;
+  font-weight: 600;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .theList p {
+  padding-top: 4.5%;
+  padding-bottom: 4.5%;
+  padding-left: 2.5%;
+  cursor: pointer;
+  border-bottom: 1px solid whitesmoke;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .theList p:hover {
+  background: whitesmoke;
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .theList .theListActive {
+  color: white;
+  background: var(--main);
+}
+
+#muscularSystemWrapper #muscularSystemContent #muscleListSHOW .muscleListContent .theList .theListActive:hover {
+  background: var(--main);
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW {
+  height: 80vh;
+  display: block;
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW .muscleName {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW .muscleName h6 {
+  font-size: .55em;
+  font-family: 'Roboto', Arial;
+  font-weight: 100;
+  margin-bottom: 1%;
+  color: #e83f4c;
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW .muscleName h3 {
+  font-size: 1.5em;
+  font-family: 'campton';
+  font-weight: 900;
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW #muscularSystemSVG {
+  height: 70vh;
+  width: 100%;
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW #muscularSystemSVG #Muscles #muscularSystem path,
+#muscularSystemWrapper #muscularSystemContent #personSHOW #muscularSystemSVG #Muscles #muscularSystem ellipse {
+  fill: #e83f4c;
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW #muscularSystemSVG #Muscles #muscularSystem g {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW #muscularSystemSVG #Muscles #muscularSystem g:hover ellipse {
+  fill: #ffc526;
+}
+
+#muscularSystemWrapper #muscularSystemContent #personSHOW #muscularSystemSVG #Muscles #muscularSystem g:hover path {
+  fill: #ffc526;
+}
+
+#muscleContent {
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  overflow: scroll;
+}
+
+#muscleContent .muscle-info {
+  width: 85%;
+}
+
+#muscleContent .muscle-info .muscle-info-des {
+  background: white;
+  padding: 7.5%;
+}
+
+#muscleContent .muscle-info .muscle-info-des ol {
+  margin-top: 2.5%;
+  margin-bottom: 7.5%;
+}
+
+#muscleContent .muscle-info .muscle-info-des ol li {
+  font-family: 'campton', 'Arial';
+  color: var(--textGrey);
+  line-height: 145%;
+  margin-bottom: 1.5%;
+}
+
+#muscleContent .muscle-info .muscle-info-des ol li:last-child {
+  margin-bottom: 0;
+}
+
+#muscleContent .muscle-info .muscle-info-des ol li ul {
+  margin-top: 2.5%;
+}
+
+#muscleContent .muscle-info .muscle-info-des ul {
+  margin-top: 2.5%;
+  margin-bottom: 3%;
+}
+
+#muscleContent .muscle-info .muscle-info-des ul li {
+  font-family: 'campton', 'Arial';
+  color: var(--textGrey);
+  line-height: 145%;
+  margin-bottom: 1.5%;
+}
+
+#muscleContent .muscle-info .muscle-info-des ul li:last-child {
+  margin-bottom: 0;
+}
+
+#muscleContent .muscle-info h2 {
+  font-family: 'Roboto', Arial;
+  font-weight: 900;
+  margin-bottom: 2%;
+  font-size: 2.5em;
+  color: var(--black);
+  border-left: 5px solid var(--main);
+  padding-left: 2.5%;
+  margin-left: -3.5%;
+}
+
+#muscleContent .muscle-info h3 {
+  font-family: 'Roboto', 'Arial';
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 1%;
+  margin-top: 3%;
+  color: var(--black);
+}
+
+#muscleContent .muscle-info p {
+  line-height: 165%;
+  margin-bottom: 1.5%;
+}
+
+#muscleContent .muscle-info p span {
+  font-family: 'Roboto', Arial;
+  font-weight: 500;
+}
+
+#muscleContent .muscle-info .stroke {
+  margin: 7.5% 0;
+  width: 100%;
+  height: .25vh;
+  display: block;
+  background: var(--stroke);
+}
+
+#muscleContent .muscle-info .infoTraining {
+  margin-top: 5%;
+  background: white;
+  padding: 7.5%;
+}
+
+#muscleContent .muscle-info .infoTraining .exercise {
+  width: 100%;
+}
+
+#muscleContent .muscle-info .infoTraining .exercise ol {
+  margin-top: 2.5%;
+  margin-bottom: 7.5%;
+}
+
+#muscleContent .muscle-info .infoTraining .exercise ol li {
+  font-family: 'campton', 'Arial';
+  color: var(--textGrey);
+  line-height: 145%;
+  margin-bottom: 1.5%;
+}
+
+#muscleContent .muscle-info .infoTraining .exercise ol li:last-child {
+  margin-bottom: 0;
+}
+
+#muscleContent #welcomeInfo {
+  width: 100%;
+  height: 90vh;
+  z-index: 10;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  display: block;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+#muscleContent #welcomeInfo h1 {
+  color: var(--black);
+  font-family: 'Roboto', Arial;
+  font-size: 4em;
+  font-weight: 900;
+}
+
+#muscleContent #welcomeInfo p {
+  color: var(--textGrey);
+}
+
+#muscleContent #welcomeInfo h6 {
+  font-size: .6em;
+  font-style: italic;
+  position: absolute;
+  bottom: 2.5%;
+}
+/*# sourceMappingURL=main.css.map */
